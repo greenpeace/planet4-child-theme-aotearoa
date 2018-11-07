@@ -2,7 +2,6 @@
 	"name": "greenpeace/planet4-child-theme-newzealand",
 	"description": "Example child theme for the Planet 4 Wordpress project",
 	"type":"wordpress-theme",
-	"version":"0.1",
 	"minimum-stability" : "stable",
 	"authors": [
 		{
