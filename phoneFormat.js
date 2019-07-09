@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
 			var prefix = '';
 			var format = '';
 			var phone_raw_input = $("#en__field_supporter_NOT_TAGGED_4");
-			$(phone_raw_input).attr("pattern", ".{0}|.{8,10}");
+			$('#en__field_supporter_email_ok').attr("checked", "checked");
 			
 			/* validation messages */
 			function phoneLength(val){
