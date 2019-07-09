@@ -4,6 +4,12 @@
  * Additional code for the child theme goes in here.
  */
 
+add_action( 'wp_enqueue_scripts', 'gpnz_enqueue_script' );
+function gpnz_enqueue_script() {
+	wp_enqueue_script( 'phone-format-js', 'phoneFormat.js', false );
+	wp_enqueue_script( 'jquery-inputmask-js', 'jquery.inputmask.bundle.min.js', false );
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 
 function enqueue_child_styles() {
