@@ -1,6 +1,5 @@
 jQuery(document).ready(function(){
 	(function($) {
-		if ($('#en__field_supporter_NOT_TAGGED_4').length > 0) { // check if phone form input is on page
 			var countrycode = 64;
 			var prefix = '';
 			var format = '';
@@ -124,6 +123,5 @@ jQuery(document).ready(function(){
 			    console.log("prefix ", prefix);
 			    $('#en__field_supporter_phoneNumber').val(prefix);
 		    }); // end process input
-	    } // close check if phone form input is on page
 	})( jQuery );
 });

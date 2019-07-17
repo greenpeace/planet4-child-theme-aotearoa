@@ -4,7 +4,11 @@
  * Additional code for the child theme goes in here.
  */
 
-add_action( 'wp_enqueue_scripts', 'gpnz_enqueue_script' );
+
+if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'shortcake_enblock') ) {
+	add_action( 'wp_enqueue_scripts', 'gpnz_enqueue_script' );
+}
+
 function gpnz_enqueue_script() {
 	wp_enqueue_script( 'phone-format-js', 'phoneFormat.js', false );
 	wp_enqueue_script( 'jquery-inputmask-js', 'jquery.inputmask.bundle.min.js', false );
