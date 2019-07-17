@@ -16,3 +16,7 @@ Text Domain: planet4-child-theme
 	Display which theme is active right now in bottom right corner
 	See also planet4-child-theme-newzealand. Feel free to drop or hide display
 */
+
+#en__field_supporter_phoneNumber { display: none; }
+.warning, .warning:focus { color:orange; }
+.valid, .valid:focus { color:green; }
