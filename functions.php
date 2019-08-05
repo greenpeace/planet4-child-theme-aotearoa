@@ -6,6 +6,19 @@
 
 global $post;
 
+
+echo '<pre>';
+echo $post->post_content;
+echo '</pre>';
+
+echo '<pre>';
+echo '================================================================';
+echo '</pre>';
+
+echo '<pre>';
+echo $post;
+echo '</pre>';
+
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	if( has_shortcode( $post->post_content, 'shortcake_enblock') ){
