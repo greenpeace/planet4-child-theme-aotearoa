@@ -4,20 +4,14 @@
  * Additional code for the child theme goes in here.
  */
 
-global $post;
-
-
-echo '<pre>';
-echo $post->post_content;
-echo '</pre>';
+setup_postdata($post);
 
 echo '<pre>';
 echo '================================================================';
+echo $post->post_title;
+echo '================================================================';
 echo '</pre>';
 
-echo '<pre>';
-echo $post;
-echo '</pre>';
 
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
