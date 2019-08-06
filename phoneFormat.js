@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
 			var prefix = '';
 			var format = '';
 			var phone_raw_input = $("#en__field_supporter_NOT_TAGGED_4");
-			$('.en__field__input--checkbox').attr("checked", "checked");
+			$('#en__field_supporter_questions_11147').attr("checked", "checked");
 			
 			/* validation messages */
 			function phoneLength(val){
