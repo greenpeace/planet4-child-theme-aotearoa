@@ -8,8 +8,8 @@ add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	global $post;
 	if( has_shortcode( $post->post_content, 'shortcake_enblock') ){
-      	wp_enqueue_script( 'phone-format-js', 'phoneFormat.js', false );
-	  	wp_enqueue_script( 'jquery-inputmask-js', 'jquery.inputmask.bundle.min.js', false );
+      	wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'phoneFormat.js', false );
+	  	wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'jquery.inputmask.bundle.min.js', false );
     } else {
 	    // condition not met
 	    add_action('wp_footer', 'console_log_errors');
