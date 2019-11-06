@@ -7,13 +7,19 @@
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	global $post;
+	$blocks = parse_blocks( $post->post_content );
+	if(is_page('test') ){
+		print_r($blocks);
+	}
 
-if ( strpos( $post->post_content, 'p4en_form' ) !== false ){
+/*
+	if ( strpos( $post->post_content, 'p4en_form' ) !== false ){
       	wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'/phoneFormat.js', false );
 	  	wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'/jquery.inputmask.bundle.min.js', false );
     } else {
 	    add_action('wp_footer', 'console_log_errors');
     }
+*/
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
@@ -27,7 +33,7 @@ function console_log_errors() {
 <script type="text/javascript">
 (function($) {
 
-console.log(" FAILED: has_shortcode( $post->post_content, 'shortcake_enblock' ");
+console.log(" FAILED: strpos( $post->post_content, 'p4en_form' ");
 
 })(jQuery);
 
