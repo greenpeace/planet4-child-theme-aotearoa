@@ -8,7 +8,7 @@ add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	global $post;
 
-	if ( strpos( $post->post_content, 'p4en_form' ) !== false ){
+if ( strpos( $post->post_content, 'p4en_form' ) !== false ){
       	wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'/phoneFormat.js', false );
 	  	wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'/jquery.inputmask.bundle.min.js', false );
     } else {
