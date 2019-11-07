@@ -7,6 +7,12 @@
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	global $post;
+	
+	$blocks = parse_blocks( $post->post_content );
+ 	if(is_page('test') ){
+ 		print_r($blocks);
+ 	}
+	
 	if ( has_block('enform') ){
 	    wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'/phoneFormat.js', false );
 		wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'/jquery.inputmask.bundle.min.js', false );
@@ -21,7 +27,7 @@ function enqueue_child_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
 
-function console_log_errors() {
+function console_log() {
 ?>
 <script type="text/javascript">
 (function($) {
