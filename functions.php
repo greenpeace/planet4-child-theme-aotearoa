@@ -6,6 +6,7 @@
 
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
+	
 	global $post;
 	
 	$blocks = parse_blocks( $post->post_content );
