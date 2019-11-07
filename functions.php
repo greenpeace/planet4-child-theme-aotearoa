@@ -21,7 +21,7 @@ function enqueue_child_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
 
-function console_log_errors() {
+function console_log() {
 ?>
 <script type="text/javascript">
 (function($) {
