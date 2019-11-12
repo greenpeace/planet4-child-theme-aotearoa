@@ -24,6 +24,7 @@ function gpnz_enqueue_script() {
 		}
 	
 	}
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
