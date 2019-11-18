@@ -52,7 +52,7 @@ function console_log_false() {
 <script type="text/javascript">
 (function($) {
 
-console.log(" no match: 'planet4-blocks/enform' === $block['blockName'] ");
+console.log("parsed block did not match condition");
 
 })(jQuery);
 
