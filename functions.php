@@ -25,6 +25,10 @@ function gpnz_enqueue_script() {
 	
 	}
 	
+	if( $post->ID == 7669 ){
+		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.js', false );
+	}
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
