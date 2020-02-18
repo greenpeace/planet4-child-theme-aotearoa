@@ -25,8 +25,12 @@ function gpnz_enqueue_script() {
 	
 	}
 	
-	if( $post->ID == 7669 or $post->ID == 684 or $post->ID == 7573){
+	if( $post->ID == 7669 || $post->ID == 684 || $post->ID == 7573){
+// 	if( is_page('test') ){
+		add_action('wp_footer', 'console_log');
 		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.js', false );
+	} else {
+		//add_action('wp_footer', 'console_log');
 	}
 	
 }
@@ -35,6 +39,20 @@ add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
+}
+
+function console_log() {
+?>
+<script type="text/javascript">
+(function($) {
+
+console.log(" is $post->ID == 7669 || $post->ID == 684 || $post->ID == 7573 ");
+
+})(jQuery);
+
+</script>
+
+<?php
 }
 
 function console_log_true() {
