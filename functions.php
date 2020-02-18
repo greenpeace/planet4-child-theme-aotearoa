@@ -25,7 +25,7 @@ function gpnz_enqueue_script() {
 	
 	}
 	
-	if( $post->ID == 7669 ){
+	if( $post->ID == 7669 or $post->ID == 684 or $post->ID == 7573){
 		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.js', false );
 	}
 	
