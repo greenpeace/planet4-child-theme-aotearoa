@@ -28,7 +28,7 @@ function gpnz_enqueue_script() {
 	if( $post->ID == 7669 || $post->ID == 684 || $post->ID == 7573){
 // 	if( is_page('test') ){
 		add_action('wp_footer', 'console_log');
-		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.js', false );
+		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.20200219.js', false );
 	} else {
 		//add_action('wp_footer', 'console_log');
 	}
