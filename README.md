@@ -9,10 +9,12 @@ Please check the master theme code for more information.
 
 ## features added
 
-1 phone validator script
+- function check if EN form block on page
 
-2 input mask
+- phone validator script
 
-3 count up script
+- input mask
 
-4 footer template override for sheilded logo/script https://shielded.co.nz
+- count up script
+
+- footer template override for sheilded logo/script https://shielded.co.nz
