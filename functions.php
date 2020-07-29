@@ -1,33 +1,14 @@
 <?php
 
-/**
- * Additional code for the child theme goes in here.
- */
-
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
 	global $post;
-		
-	$blocks = parse_blocks( $post->post_content );
 	
-	if ( has_blocks( $post->post_content ) ) {
-	    $blocks = parse_blocks( $post->post_content );
-		
-		foreach ( $blocks as $block ) {
-			if ( 'planet4-blocks/enform' === $block['blockName'] ) {
-				add_action('wp_footer', 'console_log_true');
-			    wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'/phoneFormat.js', false );
-				wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'/jquery.inputmask.bundle.min.js', false );
-			} else {
-				add_action('wp_footer', 'console_log_false');
-			}
-		}
-	
-	}
+	wp_enqueue_script( 'phone-format-js', get_stylesheet_directory_uri().'/phoneFormat.js', false );
+	wp_enqueue_script( 'jquery-inputmask-js', get_stylesheet_directory_uri().'/jquery.inputmask.bundle.min.js', false );
 	
 	if( $post->ID == 7669 || $post->ID == 684 || $post->ID == 7573){
-// 	if( is_page('test') ){
-		add_action('wp_footer', 'console_log');
+		// add_action('wp_footer', 'console_log');
 		$version_countUp = filectime(get_stylesheet_directory() . '/countUp.js');
 		wp_enqueue_script( 'countUp', get_stylesheet_directory_uri().'/countUp.js', [], $version_countUp );
 	} else {
