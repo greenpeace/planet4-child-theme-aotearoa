@@ -6,6 +6,11 @@ jQuery(document).ready(function(){
 			var phone_raw_input = $("#en__field_supporter_NOT_TAGGED_4");
 			$('#en__field_supporter_questions_11147').attr("checked", "checked");
 			
+			$('#MC_form').append('<input name="transformed_phone" type="hidden" value="">');
+			$('#MC_form').append('<input name="mobile" type="hidden" value="">');
+			$('#MC_form').append('<input name="landline" type="hidden" value="">');
+
+			
 			/* validation messages */
 			function phoneLength(val){
 			    console.log("val.length ", val.length);
@@ -87,6 +92,13 @@ jQuery(document).ready(function(){
 		                    var format = current.replace(/\D/g,''); // replace all non numeric characters
 		                    var prefix = countrycode+format.substring(1); // remove leading 0
 		                    console.log("prefix: ", prefix);
+		                    var landline = '';
+		                    var mobile = countrycode+format.substring(1); // remove leading 0
+		                    console.log("prefix: ", mobile);
+							$('input[name=transformed_phone]').val(mobile);
+							$('input[name=mobile]').val(mobile);
+							$('input[name=landline]').val('');
+							
 		                } else if ( digits > 11){
 		                    $(this).val($(this).val().substr(0, 16));
 		                    
@@ -109,8 +121,11 @@ jQuery(document).ready(function(){
 		                $(this).val($(this).val().substr(0, 13)); // disallow more characters
 		                // validationErrors("phoneLength","ok");
 		                    var format = $(this).val().substr(0, 13).replace(/\D/g,''); // replace all non numeric characters
-		                    var prefix = countrycode+format.substring(1); // remove leading 0
-		                    console.log("prefix: ", prefix);
+		                    var landline = countrycode+format.substring(1); // remove leading 0
+		                    console.log("prefix: ", landline);
+		                    $('input[name=transformed_phone]').val(landline);
+							$('input[name=landline]').val(landline);
+							$('input[name=mobile]').val('');
 		            } else if(digits > 1){
 		                console.log("landline ");
 		                // validationErrors("phoneLength","Must be exactly 7 digits after prefix");
