@@ -9,8 +9,6 @@ Please check the master theme code for more information.
 
 ## features added
 
-- check if EN form block is on page
-
 - phone validator script
 
 - input mask script
