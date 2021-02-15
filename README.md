@@ -1,4 +1,4 @@
-# Greenpeace Planet 4 Child Theme for GP New Zealand
+# Greenpeace Planet 4 Child Theme for GP Aotearoa
 
 Child theme for the Planet 4 Wordpress project.
 The related master theme’s code lives at: 

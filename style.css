@@ -1,20 +1,20 @@
 /*
-Theme Name: Greenpeace Planet 4 Child Theme New Zealand
-Theme URI: https://github.com/greenpeace/planet4-child-theme-newzealand
-Description: Exemplary child theme for the Planet 4 Wordpress project
+Theme Name: Greenpeace Planet 4 Child Theme Aotearoa
+Theme URI: https://github.com/greenpeace/planet4-child-theme-aotearoa
+Description: Greenpeace Planet 4 Child Theme Aotearoa
 Author: Greenpeace International
 Author URI: https://github.com/greenpeace
 Template: planet4-master-theme
-Version: 0.2
+Version: 0.10
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: light, accessibility-ready
-Text Domain: planet4-child-theme
+Text Domain: planet4-child-theme-aotearoa
 */
 
 /*
 	Display which theme is active right now in bottom right corner
-	See also planet4-child-theme-newzealand. Feel free to drop or hide display
+	See also planet4-child-theme-aotearoa. Feel free to drop or hide display
 */
 
 #en__field_supporter_phoneNumber { display: none; }

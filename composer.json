@@ -1,14 +1,8 @@
 {
-	"name": "greenpeace/planet4-child-theme-newzealand",
-	"description": "Example child theme for the Planet 4 Wordpress project",
+	"name": "greenpeace/planet4-child-theme-aotearoa",
+	"description": "Planet 4 Child theme for Aotearoa",
 	"type":"wordpress-theme",
 	"minimum-stability" : "stable",
-	"authors": [
-		{
-			"name": "Konstantinos Kokkorogiannis",
-			"email": "kkokkoro@greenpeace.org"
-		}
-	],
 	"license": "GPL-3.0+",
 	"repositories": [
 		{
@@ -17,9 +11,8 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/greenpeace/planet4-child-theme-newzealand/issues",
-		"wiki": "https://github.com/greenpeace/planet4-child-theme-newzealand/wiki",
-		"source": "https://github.com/greenpeace/planet4-child-theme-newzealand"
+		"issues": "https://github.com/greenpeace/planet4-child-theme-aotearoa/issues",
+		"source": "https://github.com/greenpeace/planet4-child-theme-aotearoa"
 	},
 	"extra": {
 		"installer-paths": {
