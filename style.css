@@ -20,3 +20,7 @@ Text Domain: planet4-child-theme-aotearoa
 #en__field_supporter_phoneNumber { display: none; }
 .warning, .warning:focus { color:orange; }
 .valid, .valid:focus { color:green; }
+
+#comments{ display:none; }
+
+.page-header h1 { font-size:3.5rem; }
