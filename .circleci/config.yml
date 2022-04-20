@@ -1,0 +1,71 @@
+---
+version: 2.1
+
+docker_auth: &docker_auth
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_PASSWORD
+
+defaults: &defaults
+  docker:
+    - image: greenpeaceinternational/circleci-base:latest
+      auth:
+        <<: *docker_auth
+
+job_definitions:
+  trigger_steps: &trigger_steps
+    working_directory: ~/
+    parameters:
+      pipeline:
+        default: "main"
+        type: string
+    steps:
+      - run:
+          name: Prepare git
+          command: |
+            mkdir -p ~/.ssh
+            echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==' >> ~/.ssh/known_hosts
+      - run:
+          name: Trigger website deployment
+          command: |
+            reponame="${CIRCLE_PROJECT_REPONAME}"
+            split=(${reponame//-/ })
+            website=${split[3]}
+            echo "Website: ${website}"
+            trigger-build.sh "https://${GITHUB_OAUTH_TOKEN}@github.com/greenpeace/planet4-${website}.git" << parameters.pipeline >>
+
+jobs:
+  trigger-develop:
+    <<: *defaults
+    <<: *trigger_steps
+
+  trigger-production:
+    <<: *defaults
+    <<: *trigger_steps
+
+workflow_definitions:
+  on_develop_commit: &on_develop_commit
+    context: org-global
+    filters:
+      branches:
+        only: main
+
+  on_release_tag: &on_release_tag
+    context: org-global
+    filters:
+      branches:
+        ignore: /.*/
+      tags:
+        only: /^v.*/
+
+workflows:
+  develop:
+    jobs:
+      - trigger-develop:
+          <<: *on_develop_commit
+          pipeline: main
+
+  production:
+    jobs:
+      - trigger-production:
+          <<: *on_release_tag
+          pipeline: tag
