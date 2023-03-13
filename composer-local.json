@@ -1,0 +1,10 @@
+{
+    "name": "greenpeace/planet4-child-theme-aotearoa",
+    "description": "Greenpeace P4 Aotearoa local",
+    "license": "MIT",
+    "require": {
+      "greenpeace/planet4-child-theme-international" : "dev-main",
+      "wpackagist-plugin/notification": "8.0.*",
+      "plugins/gravityformsstripe": "*"
+    }
+  }
