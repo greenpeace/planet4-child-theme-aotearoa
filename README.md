@@ -15,4 +15,4 @@ Please check the master theme code for more information.
 
 - count up script
 
-- sheilded logo/script footer template override  https://shielded.co.nz.
+- sheilded logo/script footer template override  https://shielded.co.nz
