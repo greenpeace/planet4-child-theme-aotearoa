@@ -1,5 +1,6 @@
 <?php
 /* added child plugins in composer-local.json */
+/* add stripe customer funtions */
 
 add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
 function gpnz_enqueue_script() {
