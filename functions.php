@@ -28,14 +28,14 @@ function enqueue_child_styles() {
 add_action( 'gform_post_payment_completed', function ( $entry, $action ) {
      
     // Do something here.
-	echo '<pre>';
- 	echo 'gform_post_payment_completed entry';
-	print_r($entry);
-	echo '</pre>'; 
 
-	echo '<pre>';
-	echo '========================== action';
+ 	echo "gform_post_payment_completed entry";
+	print_r($entry);
+
+
+
+	echo "========================== action";
 	print_r($action);
- 	echo '</pre>'; 
+
  
 }, 10, 2 );
