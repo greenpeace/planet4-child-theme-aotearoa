@@ -1,7 +1,8 @@
 <?php
 /* added child plugins in composer-local.json */
 
-add_action( 'wp_head', 'gpnz_enqueue_script', 11 );
+
+add_action( 'wp_head', 'gpnz_enqueue_script', 11 )
 function gpnz_enqueue_script() {
 	global $post;
 	
