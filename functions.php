@@ -17,3 +17,18 @@ function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
+
+add_action( 'gform_post_payment_completed', function ( $entry, $action ) {
+     
+    // Do something here.
+
+ 	echo "gform_post_payment_completed entry";
+	print_r($entry);
+
+
+
+	echo "========================== action";
+	print_r($action);
+
+ 
+}, 10, 2 );
