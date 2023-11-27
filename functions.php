@@ -22,13 +22,15 @@ add_action( 'gform_post_payment_completed', function ( $entry, $action ) {
      
     // Do something here.
 
- 	echo "gform_post_payment_completed entry";
+ 	echo "gform_post_payment_completed entry<br/>";
+	echo "<pre>";
 	print_r($entry);
+	echo "</pre>";
 
 
-
-	echo "========================== action";
+	echo "========================== action<br/>";
+	echo "<pre>";
 	print_r($action);
-
+	echo "</pre>";
  
 }, 10, 2 );
