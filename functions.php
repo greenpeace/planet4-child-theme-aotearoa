@@ -32,5 +32,16 @@ add_action( 'gform_post_payment_completed', function ( $entry, $action ) {
 	echo "<pre>";
 	print_r($action);
 	echo "</pre>";
+
+	    // If data from the Stripe webhook event is needed (and this hook was initiated via a Stripe webhook request), you can access event data with the following line:
+		$event = gf_stripe()->get_webhook_event();
+		if ( $event ){
+
+			echo "<pre>";
+			print_r($event);
+			echo "</pre>";
+
+		   // Access webhook event data. For event object documentation, see: https://stripe.com/docs/api/events/object
+		} 
  
 }, 10, 2 );
