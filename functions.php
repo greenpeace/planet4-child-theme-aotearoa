@@ -163,4 +163,4 @@ function add_donate_button() {
     Donate
     </a>';
 }
-add_action('wp_head', 'add_donate_button');
+add_action('wp_header', 'add_donate_button');
