@@ -24,3 +24,26 @@ Text Domain: planet4-child-theme-aotearoa
 #comments{ display:none; }
 
 .page-header h1 { font-size:3.5rem; }
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+	header{
+		align-items: center;
+	}
+    .btn-donate-mobile-nav{
+		margin: 0px 16px;
+	    line-height: 32px;
+	    padding: 0px 16px;
+	    width: auto;
+	    min-width: auto;
+	    height: 32px;
+	}
+	.nav-search-toggle-container{
+		display: none !important;
+	}
+}
+@media (min-width: 480px) {
+ .btn-donate-mobile-nav {
+   display: none;
+ }
+}
