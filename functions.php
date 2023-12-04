@@ -156,3 +156,11 @@ add_filter( 'gform_stripe_customer_id', function ( $customer_id, $feed, $entry, 
 // }
 
 // add_action('woocommerce_payment_complete', 'add_card_details');
+
+
+function add_donate_button() {
+    echo '<a class="btn btn-donate" href="https://donate.act.greenpeace.org.nz/p4-donate?source=nav" data-ga-category="Menu Navigation" data-ga-action="Donate" data-ga-label="Homepage">
+    Donate
+    </a>';
+}
+add_action('wp_head', 'add_donate_button');
