@@ -16,6 +16,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
+    wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri().'/custom.js', false );
 }
 
 add_action( 'gform_post_payment_completed', function ( $entry, $action ) {
@@ -157,10 +158,3 @@ add_filter( 'gform_stripe_customer_id', function ( $customer_id, $feed, $entry, 
 
 // add_action('woocommerce_payment_complete', 'add_card_details');
 
-
-function add_donate_button() {
-    echo '<a class="btn btn-donate" href="https://donate.act.greenpeace.org.nz/p4-donate?source=nav" data-ga-category="Menu Navigation" data-ga-action="Donate" data-ga-label="Homepage">
-    Donate
-    </a>';
-}
-add_action('wp_header', 'add_donate_button');
