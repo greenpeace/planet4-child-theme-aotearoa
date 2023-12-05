@@ -26,24 +26,33 @@ Text Domain: planet4-child-theme-aotearoa
 .page-header h1 { font-size:3.5rem; }
 
 /* Mobile Styles */
+
 @media only screen and (max-width: 480px) {
-	header{
-		align-items: center;
-	}
-    .btn-donate-mobile-nav{
-		margin: 0px 16px;
-	    line-height: 32px !important;
-	    padding: 0px 16px !important;
-	    width: auto;
-	    min-width: auto !important;
-	    height: 32px !important;
-		font-size: 14px !important;
-	}
+	
 	.nav-search-toggle-container{
 		display: none !important;
 	}
+   .btn-donate-mobile-nav{
+ 		margin: 0px 16px !important
+ 	}
 }
-@media (min-width: 480px) {
+@media only screen and (max-width: 992px) {
+	header{
+		align-items: center;
+	}
+  
+    .btn-donate-mobile-nav{
+		line-height: 32px !important;
+		padding: 0px 16px !important;
+		width: auto;
+		min-width: auto !important;
+		height: 32px !important;
+		font-size: 14px !important;
+		margin-left: auto !important
+	}
+	
+}
+@media (min-width: 992px) {
  .btn-donate-mobile-nav {
    display: none;
  }
