@@ -33,7 +33,14 @@ Text Domain: planet4-child-theme-aotearoa
 		display: none !important;
 	}
    .btn-donate-mobile-nav{
- 		margin: 0px 16px !important
+ 		margin: 0px 16px !important;
+ 		
+ 	}
+}
+@media (min-width:481px) and (max-width:992px) {
+   .btn-donate-mobile-nav{
+ 		
+ 		margin-left: auto !important;
  	}
 }
 @media only screen and (max-width: 992px) {
@@ -48,7 +55,6 @@ Text Domain: planet4-child-theme-aotearoa
 		min-width: auto !important;
 		height: 32px !important;
 		font-size: 14px !important;
-		margin-left: auto !important
 	}
 	
 }
