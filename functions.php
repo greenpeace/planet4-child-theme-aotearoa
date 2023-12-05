@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
-    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri().'/js/custom.js', [], '1.0.0',  array(
+    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri().'/js/custom.js', [], '1.0.1',  array(
         'strategy' => 'defer',
     ));
 }
