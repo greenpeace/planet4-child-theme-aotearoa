@@ -1,27 +1,28 @@
 {
-	"name": "greenpeace/planet4-child-theme-aotearoa",
-	"description": "Planet 4 Child theme for Aotearoa",
-	"type":"wordpress-theme",
-	"minimum-stability" : "stable",
-	"license": "GPL-3.0+",
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/greenpeace/planet4-child-theme-aotearoa/issues",
-		"source": "https://github.com/greenpeace/planet4-child-theme-aotearoa"
-	},
-	"extra": {
-		"installer-paths": {
-			"../../plugins/{$name}/": [
-				"wpackagist-plugin/*",
-				"type:wordpress-plugin"
-			]
-		}
-	},
-	"require": {
-	}
+  "name": "greenpeace/planet4-child-theme-aotearoa",
+  "description": "Planet 4 Child theme for Aotearoa",
+  "type": "wordpress-theme",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/greenpeace/planet4-child-theme-aotearoa/issues",
+    "source": "https://github.com/greenpeace/planet4-child-theme-aotearoa"
+  },
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "require": {
+    "wpackagist-plugin/wordpress-seo": "23.6"
+  }
 }
