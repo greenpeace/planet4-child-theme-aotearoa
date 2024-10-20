@@ -22,7 +22,5 @@
       ]
     }
   },
-  "require": {
-    "wpackagist-plugin/wordpress-seo": "23.6"
-  }
+  "require": {}
 }
