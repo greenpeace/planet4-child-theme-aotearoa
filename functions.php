@@ -160,3 +160,29 @@ add_filter( 'gform_stripe_customer_id', function ( $customer_id, $feed, $entry, 
 
 // add_action('woocommerce_payment_complete', 'add_card_details');
 
+
+add_action('admin_bar_menu', function ($wp_admin_bar) {
+    if (!defined('WP_STATELESS_MEDIA_ROOT_DIR')) {
+        return;
+    }
+
+    $timestamp = current_time('timestamp');
+    $replacements = [
+        '%date_year%'   => date('Y', $timestamp),
+        '%date_month%'  => date('m', $timestamp),
+        '%date_day%'    => date('d', $timestamp),
+        '%timestamp%'   => $timestamp,
+        '%username%'    => is_user_logged_in() ? wp_get_current_user()->user_login : 'anonymous',
+        '%user_id%'     => get_current_user_id() ?: 0,
+    ];
+
+    $resolved_value = strtr(WP_STATELESS_MEDIA_ROOT_DIR, $replacements);
+    error_log("[Stateless] MEDIA_ROOT_DIR raw:     " . WP_STATELESS_MEDIA_ROOT_DIR);
+    error_log("[Stateless] MEDIA_ROOT_DIR resolved: " . $resolved_value);
+
+    $wp_admin_bar->add_node([
+        'id'    => 'stateless-root-dir',
+        'title' => 'Stateless Path: ' . $resolved_value,
+        'href'  => false,
+    ]);
+}, 100);
