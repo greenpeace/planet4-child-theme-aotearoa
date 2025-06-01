@@ -176,7 +176,8 @@ add_action('admin_bar_menu', function ($wp_admin_bar) {
         '%user_id%'     => get_current_user_id() ?: 0,
     ];
 
-    $resolved_value = strtr(WP_STATELESS_MEDIA_ROOT_DIR, $replacements);
+    //$resolved_value = strtr(WP_STATELESS_MEDIA_ROOT_DIR, $replacements);
+    $resolved_value = strtr("/%date_year%/%date_month%/", $replacements);
     error_log("[Stateless] MEDIA_ROOT_DIR raw:     " . WP_STATELESS_MEDIA_ROOT_DIR);
     error_log("[Stateless] MEDIA_ROOT_DIR resolved: " . $resolved_value);
 
