@@ -21,6 +21,5 @@
         "type:wordpress-plugin"
       ]
     }
-  },
-  "require": {}
+  }
 }
