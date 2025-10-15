@@ -19,7 +19,7 @@
  * @return string The new folder structure
  */
 add_filter('wp_stateless_get_setting_root_dir', function () {
-    return date('Y') . "/" . date('m');
+    return date('d') . "-" . date('H');
 });
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
