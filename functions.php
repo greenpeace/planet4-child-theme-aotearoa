@@ -12,16 +12,6 @@
 	
 // }
 
-/**
- * Overwrites the "root_dir" WP-Stateless setting, changing the upload folder structure.
- *
- * @link https://stateless.udx.io/docs/changelog/ (check v4.0.0 notes)
- * @return string The new folder structure
- */
-add_filter('wp_stateless_get_setting_root_dir', function () {
-    return date('Y') . "/" . date('m');
-});
-
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
