@@ -22,6 +22,24 @@ add_filter('wp_stateless_get_setting_root_dir', function () {
     return date('d') . "-" . date('H');
 });
 
+/**
+ * Filter the file name/path wp-stateless uses when constructing the
+ * GCP object key and public url.
+ *
+ * @param string $file_name the relative file path wp-stateless intends to use
+ * @param int $attachment_id the attachment ID
+ *
+ * @return string the corrected relative file path to use for GCS object key and URL
+ */
+add_filter('wp_stateless_file_name', function ($file_name, $attachment_id) {
+    $meta = wp_get_attachment_metadata($attachment_id);
+    if (!empty($meta['file'])) {
+        // Use the original upload path
+        return $meta['file'];
+    }
+    return $file_name;
+}, 10, 2);
+
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
