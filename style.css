@@ -17,54 +17,66 @@ Text Domain: planet4-child-theme-aotearoa
 	See also planet4-child-theme-aotearoa. Feel free to drop or hide display
 */
 
-#en__field_supporter_phoneNumber { display: none; }
-.warning, .warning:focus { color:orange; }
-.valid, .valid:focus { color:green; }
+#en__field_supporter_phoneNumber {
+  display: none;
+}
+.warning,
+.warning:focus {
+  color: orange;
+}
+.valid,
+.valid:focus {
+  color: green;
+}
 
-#comments{ display:none; }
+#comments {
+  display: none;
+}
 
-.page-header h1 { font-size:3rem; }
+.page-header h1 {
+  font-size: 3rem;
+}
+
+.nav-languages-toggle {
+  background: transparent;
+}
 
 /* Mobile Styles */
 
 @media only screen and (max-width: 480px) {
-	
-	.nav-search-toggle-container{
-		display: none !important;
-	}
-   .btn-donate-mobile-nav{
- 		margin: 0px 16px !important;
- 		
- 	}
+  .nav-search-toggle-container {
+    display: none !important;
+  }
+  .btn-donate-mobile-nav {
+    margin: 0px 16px !important;
+  }
 }
-@media (min-width:481px) and (max-width:992px) {
-   .btn-donate-mobile-nav{
- 		
- 		margin-left: auto !important;
- 	}
+@media (min-width: 481px) and (max-width: 992px) {
+  .btn-donate-mobile-nav {
+    margin-left: auto !important;
+  }
 }
 @media only screen and (max-width: 992px) {
-	header{
-		align-items: center;
-	}
-  
-    .btn-donate-mobile-nav{
-		line-height: 32px !important;
-		padding: 0px 16px !important;
-		width: auto;
-		min-width: auto !important;
-		height: 32px !important;
-		font-size: 14px !important;
-	}
-	
+  header {
+    align-items: center;
+  }
+
+  .btn-donate-mobile-nav {
+    line-height: 32px !important;
+    padding: 0px 16px !important;
+    width: auto;
+    min-width: auto !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
 }
 @media (min-width: 992px) {
- .btn-donate-mobile-nav {
-   display: none;
- }
+  .btn-donate-mobile-nav {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
-    .happy-point-block-wrap .happy-point iframe {
-        margin-top: calc(var(--iframe-height) / 10);
-    }
+  .happy-point-block-wrap .happy-point iframe {
+    margin-top: calc(var(--iframe-height) / 10);
+  }
 }
