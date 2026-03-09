@@ -60,6 +60,12 @@ Text Domain: planet4-child-theme-aotearoa
   header {
     align-items: center;
   }
+  
+  #nav-mobile{ display: none;}
+
+  body.with-mobile-tabs .page-header {
+    padding-top: none;
+  }
 
   .btn-donate-mobile-nav {
     line-height: 32px !important;
