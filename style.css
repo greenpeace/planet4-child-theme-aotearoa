@@ -63,7 +63,7 @@ Text Domain: planet4-child-theme-aotearoa
   
   #nav-mobile{ display: none;}
 
-  body.with-mobile-tabs .page-header {
+  body.with-mobile-tabs .page-header, body.with-mobile-tabs .no-page-title {
     padding-top: none;
   }
 
