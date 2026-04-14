@@ -41,6 +41,20 @@ Text Domain: planet4-child-theme-aotearoa
   background: transparent;
 }
 
+main#content {
+    margin-top: 3em;
+}
+
+.subscribe-block{
+  background-image: url(https://www.greenpeace.org/static/planet4-aotearoa-stateless-develop/2026/03/542cf92a-gp1sxo1u.jpg);
+  background-size: cover;
+}
+
+h2.gform_title {
+    color: white;
+    padding-top: 1em;
+}
+
 /* Mobile Styles */
 
 @media only screen and (max-width: 480px) {
@@ -48,7 +62,7 @@ Text Domain: planet4-child-theme-aotearoa
     display: none !important;
   }
   .btn-donate-mobile-nav {
-    margin: 0px 16px !important;
+    /* margin: 0px 16px !important; */
   }
 }
 @media (min-width: 481px) and (max-width: 992px) {
@@ -60,7 +74,23 @@ Text Domain: planet4-child-theme-aotearoa
   header {
     align-items: center;
   }
+  
+  #nav-mobile{ 
+    display: none;
+  }
 
+  main {
+    margin-top: 10em;
+  }
+
+  body.with-mobile-tabs .page-header, body.with-mobile-tabs .no-page-title {
+    padding-top: 0;
+  }
+
+  .nav-search-toggle { 
+    margin: auto 0;
+  }
+  
   .btn-donate-mobile-nav {
     line-height: 32px !important;
     padding: 0px 16px !important;
