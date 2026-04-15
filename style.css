@@ -43,10 +43,6 @@ Text Domain: planet4-child-theme-aotearoa
   background: transparent;
 }
 
-main#content {
-    margin-top: 3em;
-}
-
 .subscribe-block{
   background-image: url(https://www.greenpeace.org/static/planet4-aotearoa-stateless-develop/2026/03/542cf92a-gp1sxo1u.jpg);
   background-size: cover;
