@@ -75,10 +75,6 @@ h2.gform_title {
     display: none;
   }
 
-  main {
-    margin-top: 5em;
-  }
-
   body.with-mobile-tabs .page-header, body.with-mobile-tabs .no-page-title {
     padding-top: 0;
   }
